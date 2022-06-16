@@ -18,33 +18,37 @@ public class odev2 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Yapmak itediðiniz iþlemi yazýn.");
 		String ifade = input.nextLine();
-		int sayi1 = 0;
-		int sayi2 = 0;
+		String sayi1;
+		char x = 0;
+		char y = 0;
+		sayi1 = ifade.replaceAll("[^0-9]", "");
 
-		for (int i = 0; i <= ifade.length();) {
-			sayi2 = sayi1;
-			if (ifade.contains("i")) {
-
-				sayi1 = i;
-				i++;
-			} else {
-				i++;
-			}
-		}
 		if (ifade.contains("topla")) {
-			int topla = sayi1 + sayi2;
-			System.out.println(topla);
+			x = sayi1.charAt(0);
+			y = sayi1.charAt(1);
+			int a = Character.valueOf(x);
+			int b = Character.valueOf(y);
+			int topla = x + y;
+			System.out.println(a);
+			System.out.println(b);
+			System.out.println(a + b);
 		}
 		if (ifade.contains("fark")) {
-			int fark = sayi1 - sayi2;
+			x = sayi1.charAt(0);
+			y = sayi1.charAt(1);
+			int fark = x - y;
 			System.out.println(fark);
 		}
 		if (ifade.contains("böl")) {
-			int bol = sayi1 / sayi2;
+			x = sayi1.charAt(0);
+			y = sayi1.charAt(1);
+			int bol = x / y;
 			System.out.println(bol);
 		}
 		if (ifade.contains("çarp")) {
-			int carp = sayi1 * sayi2;
+			x = sayi1.charAt(0);
+			y = sayi1.charAt(1);
+			int carp = x * y;
 			System.out.println(carp);
 		}
 
